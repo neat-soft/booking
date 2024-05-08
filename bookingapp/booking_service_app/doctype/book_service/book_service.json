@@ -1,0 +1,132 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2018-09-19 13:16:47.522970",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "customer",
+  "column_break_2",
+  "posting_date",
+  "time",
+  "booking_items_section",
+  "book_item",
+  "amended_from",
+  "status_section_section",
+  "sales_order",
+  "status"
+ ],
+ "fields": [
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Naming Series",
+   "options": "BK-.########",
+   "print_hide": 1,
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "booking_items_section",
+   "fieldtype": "Section Break",
+   "label": "Booking Items"
+  },
+  {
+   "fieldname": "book_item",
+   "fieldtype": "Table",
+   "label": "Book Item",
+   "options": "Book Service Item",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Book Service",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "status_section_section",
+   "fieldtype": "Section Break",
+   "label": "Status Section"
+  },
+  {
+   "default": "0",
+   "fieldname": "sales_order",
+   "fieldtype": "Check",
+   "label": "Sales Order"
+  },
+  {
+   "default": "Now",
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "label": "Posting Date",
+   "reqd": 1
+  },
+  {
+   "default": "Now",
+   "fieldname": "time",
+   "fieldtype": "Time",
+   "label": "Time",
+   "reqd": 1
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nDraft\nOn Hold\nTo Deliver and Bill\nTo Bill\nTo Deliver\nCompleted\nCancelled\nClosed",
+   "read_only": 1
+  }
+ ],
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2022-10-02 17:53:30.534246",
+ "modified_by": "Administrator",
+ "module": "Booking Service App",
+ "name": "Book Service",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "show_name_in_global_search": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "customer",
+ "track_changes": 1,
+ "track_seen": 1
+}
